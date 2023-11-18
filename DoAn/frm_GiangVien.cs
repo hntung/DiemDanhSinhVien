@@ -36,8 +36,14 @@ namespace DoAn
             menuStrip.Items["NameMenuStrip"].Text = db.getScalar(sql).ToString();
             load_gridview();
             DataBingding(ds_LopGiangDay.Tables["LopGiangDay"]);
+            label_class.Hide();
         }
+   
 
+        private void grd_LopGiangDay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            label_class.Show();
+        }
         public event EventHandler DangXuat;
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
@@ -58,18 +64,19 @@ namespace DoAn
             SqlDataAdapter da = new SqlDataAdapter(sql, db.Connect);
             da.Fill(ds_LopGiangDay, "LopGiangDay");
             grd_LopGiangDay.DataSource = ds_LopGiangDay.Tables["LopGiangDay"];
-            grd_LopGiangDay.ClearSelection();
         }
 
         public void DataBingding(DataTable pdt)
         {
-            btn_ViewClass.DataBindings.Clear();
-            btn_ViewClass.DataBindings.Add("Text", pdt, "MaLopMonHoc");
+            label_class.DataBindings.Clear();
+            label_class.DataBindings.Add("Text", pdt, "MaLopMonHoc");
         }
-
+     
         private void LogoutMenuStrip_Click(object sender, EventArgs e)
         {
             DangXuat(this, new EventArgs());
         }
+
+       
     }
 }
