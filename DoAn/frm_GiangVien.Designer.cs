@@ -42,7 +42,7 @@
             this.InfoMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ChangePasswordMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.LogoutMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.label_class = new System.Windows.Forms.Label();
+            this.cbo_Lop = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grd_LopGiangDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip.SuspendLayout();
@@ -54,7 +54,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(319, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 32);
+            this.label1.Size = new System.Drawing.Size(349, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách lớp giảng dạy";
             // 
@@ -76,7 +76,6 @@
             this.grd_LopGiangDay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd_LopGiangDay.Size = new System.Drawing.Size(987, 174);
             this.grd_LopGiangDay.TabIndex = 2;
-            this.grd_LopGiangDay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_LopGiangDay_CellClick);
             // 
             // Column1
             // 
@@ -133,6 +132,7 @@
             this.btn_ChonLop.TabIndex = 6;
             this.btn_ChonLop.Text = "Chọn lớp điểm danh";
             this.btn_ChonLop.UseVisualStyleBackColor = true;
+            this.btn_ChonLop.Click += new System.EventHandler(this.btn_ChonLop_Click);
             // 
             // menuStrip
             // 
@@ -143,7 +143,7 @@
             this.NameMenuStrip});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(80, 31);
+            this.menuStrip.Size = new System.Drawing.Size(78, 31);
             this.menuStrip.TabIndex = 8;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -181,22 +181,20 @@
             this.LogoutMenuStrip.Text = "Đăng xuất";
             this.LogoutMenuStrip.Click += new System.EventHandler(this.LogoutMenuStrip_Click);
             // 
-            // label_class
+            // cbo_Lop
             // 
-            this.label_class.AutoSize = true;
-            this.label_class.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_class.Location = new System.Drawing.Point(277, 423);
-            this.label_class.Name = "label_class";
-            this.label_class.Size = new System.Drawing.Size(104, 20);
-            this.label_class.TabIndex = 10;
-            this.label_class.Text = "label_class";
+            this.cbo_Lop.FormattingEnabled = true;
+            this.cbo_Lop.Location = new System.Drawing.Point(281, 423);
+            this.cbo_Lop.Name = "cbo_Lop";
+            this.cbo_Lop.Size = new System.Drawing.Size(132, 24);
+            this.cbo_Lop.TabIndex = 11;
             // 
             // frm_GiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1041, 486);
-            this.Controls.Add(this.label_class);
+            this.Controls.Add(this.cbo_Lop);
             this.Controls.Add(this.btn_ChonLop);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grd_LopGiangDay);
@@ -230,6 +228,6 @@
         private System.Windows.Forms.ToolStripMenuItem InfoMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ChangePasswordMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem LogoutMenuStrip;
-        private System.Windows.Forms.Label label_class;
+        private System.Windows.Forms.ComboBox cbo_Lop;
     }
 }

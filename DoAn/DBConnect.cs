@@ -10,7 +10,7 @@ namespace DoAn
 {
     class DBConnect
     {
-        private static string stringConnection = "Data Source=MSI\\QUANGDIEU;Initial Catalog= DDSV_Test_2;Integrated Security=True";
+        private static string stringConnection = "Data Source=MSI\\QUANGDIEU;Initial Catalog= DDSV_Last;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnection);

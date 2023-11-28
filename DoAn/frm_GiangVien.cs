@@ -15,9 +15,8 @@ namespace DoAn
     {
         DBConnect db = new DBConnect();
         public bool isThoat = true;
-        string id;
-
         DataSet ds_LopGiangDay = new DataSet();
+        string id;
        
         public string Id { get => id; set => id = value; }
         public void getID(string username)
@@ -35,21 +34,17 @@ namespace DoAn
             string sql = "select HoTenGiangvien from Giangvien where MaGiangVien = '"+Id+"'";
             menuStrip.Items["NameMenuStrip"].Text = db.getScalar(sql).ToString();
             load_gridview();
+            load_CboLop();
             DataBingding(ds_LopGiangDay.Tables["LopGiangDay"]);
-            label_class.Hide();
         }
    
 
-        private void grd_LopGiangDay_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            label_class.Show();
-        }
+
         public event EventHandler DangXuat;
-        private void btn_DangXuat_Click(object sender, EventArgs e)
+        private void LogoutMenuStrip_Click(object sender, EventArgs e)
         {
             DangXuat(this, new EventArgs());
         }
-
         private void frm_GiangVien_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (isThoat)
@@ -66,17 +61,27 @@ namespace DoAn
             grd_LopGiangDay.DataSource = ds_LopGiangDay.Tables["LopGiangDay"];
         }
 
+        public void load_CboLop()
+        {
+            string sql = "select * from LopMonHoc where MaGiangVien = '"+Id+"'";
+            DataTable dt = db.getDataTable(sql);
+            cbo_Lop.DataSource = dt;
+            cbo_Lop.DisplayMember = "MaLopMonHoc";
+            cbo_Lop.ValueMember = "MaLopMonHoc";
+        }
         public void DataBingding(DataTable pdt)
         {
-            label_class.DataBindings.Clear();
-            label_class.DataBindings.Add("Text", pdt, "MaLopMonHoc");
-        }
-     
-        private void LogoutMenuStrip_Click(object sender, EventArgs e)
-        {
-            DangXuat(this, new EventArgs());
+            cbo_Lop.DataBindings.Clear();
+            cbo_Lop.DataBindings.Add("SelectedValue", pdt, "MaLopMonHoc");
         }
 
-       
+        private void btn_ChonLop_Click(object sender, EventArgs e)
+        {
+            frm_GV_DiemDanh f = new frm_GV_DiemDanh();
+            f.getID(cbo_Lop.SelectedValue.ToString());
+            f.Show();
+            this.Hide();
+            //f.DangXuat += f_DangXuat;
+        }
     }
 }

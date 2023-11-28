@@ -1,7 +1,7 @@
 use master
-create database DDSV_Test_2
+create database DDSV_Last
 
-use DDSV_Test_2
+use DDSV_Last
 
 CREATE TABLE GiangVien( 
     MaGiangVien VARCHAR(10) PRIMARY KEY, 
