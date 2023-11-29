@@ -14,7 +14,8 @@ namespace DoAn
     public partial class frm_GV_DiemDanh : Form
     {
         DBConnect db = new DBConnect();
-        DataSet DS_DiemDanh = new DataSet();
+        DataTable dt_diemdanh = new DataTable();
+        public bool isThoat = true;
         string id;
         public string Id { get => id; set => id = value; }
 
@@ -24,10 +25,19 @@ namespace DoAn
         }
         string ngayhoc;
         public string Ngayhoc { get => ngayhoc; set => ngayhoc = value; }
+       
 
         public void getNgayHoc(string ngayhoc)
         {
-            Ngayhoc = ngayhoc;  
+            Ngayhoc = ngayhoc;
+
+        }
+
+        string magv;
+        public string Magv { get => magv; set => magv = value; }
+        public void getMaGV(string ma)
+        {
+            Magv = ma;
         }
         public frm_GV_DiemDanh()
         {
@@ -41,21 +51,56 @@ namespace DoAn
             cbo_NgayHoc.DataSource = dt;
             cbo_NgayHoc.DisplayMember = "NgayHoc";
             cbo_NgayHoc.ValueMember = "NgayHoc";
-            getNgayHoc(cbo_NgayHoc.SelectedValue.ToString());
-            loadGRDDiemDanh();
+
         }
 
         void loadGRDDiemDanh()
         {
-            string sql = "select DiemDanh.MaSinhVien,HoTenSinhVien from DiemDanh inner join SinhVien on DiemDanh.MaSinhVien = SinhVien.MaSinhVien where MaLopMonHoc = '"+Id+"' and NgayHoc = '"+Ngayhoc+"'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, db.Connect);
-            da.Fill(DS_DiemDanh, "DSDiemDanh");
-            grd_DiemDanh.DataSource = DS_DiemDanh.Tables["DSDiemDanh"];
+            getNgayHoc(cbo_NgayHoc.SelectedValue.ToString());
+            string sql = "select *from DiemDanh where MaLopMonHoc = '" + Id + "' and NgayHoc = '" + ngayhoc + "'";
+            dt_diemdanh = db.getDataTable(sql);
+            grd_DiemDanh.DataSource = dt_diemdanh;
+
         }
 
         private void frm_GV_DiemDanh_Load(object sender, EventArgs e)
         {
+            string sql = "select HoTenGiangvien from Giangvien where MaGiangVien = '" + magv + "'";
+            menuStrip.Items["Name"].Text = db.getScalar(sql).ToString();
             loadCboNgayHoc();
+            loadGRDDiemDanh();
+
+        }
+
+        private void btn_ChonNgay_Click(object sender, EventArgs e)
+        {
+            loadGRDDiemDanh();
+        }
+
+
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            string sql = "select *from DiemDanh";
+            int kq = db.updateDatabase(sql, dt_diemdanh);
+            if (kq == 0)
+                MessageBox.Show("Cập nhật điểm danh thất bại");
+            else
+                MessageBox.Show("Cập nhật điểm danh thành công");
+        }
+        public event EventHandler DangXuat;
+        private void dangxuatMenuStrip_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+        }
+      
+        private void frm_GV_DiemDanh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //DialogResult r;
+            //r = MessageBox.Show("Bạn có muốn thoát?", "Thoát",
+            //    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            //if (r == DialogResult.Cancel)
+            //    e.Cancel = true;
         }
     }
 }

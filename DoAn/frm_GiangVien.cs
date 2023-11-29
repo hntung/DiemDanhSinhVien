@@ -38,17 +38,13 @@ namespace DoAn
             DataBingding(ds_LopGiangDay.Tables["LopGiangDay"]);
         }
    
-
-
-        public event EventHandler DangXuat;
-        private void LogoutMenuStrip_Click(object sender, EventArgs e)
-        {
-            DangXuat(this, new EventArgs());
-        }
         private void frm_GiangVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (isThoat)
-                Application.Exit();
+            //DialogResult r;
+            //r = MessageBox.Show("Bạn có muốn thoát?", "Thoát",
+            //    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            //if (r == DialogResult.Cancel)
+            //    e.Cancel = true;
         }
 
      
@@ -77,11 +73,32 @@ namespace DoAn
 
         private void btn_ChonLop_Click(object sender, EventArgs e)
         {
-            frm_GV_DiemDanh f = new frm_GV_DiemDanh();
-            f.getID(cbo_Lop.SelectedValue.ToString());
-            f.Show();
-            this.Hide();
-            //f.DangXuat += f_DangXuat;
+            if (string.IsNullOrEmpty(cbo_Lop.Text))
+                MessageBox.Show("Vui lòng chọn lớp môn học để điểm danh");
+            else
+            {
+                frm_GV_DiemDanh f = new frm_GV_DiemDanh();
+                f.getID(cbo_Lop.SelectedValue.ToString());
+                f.getMaGV(Id);
+                f.Show();
+                this.Hide();
+                f.DangXuat += f_DangXuat;
+            }
+
         }
+        public event EventHandler DangXuat;
+        private void LogoutMenuStrip_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+        }
+        void f_DangXuat(object sender, EventArgs e)
+        {
+            (sender as frm_GV_DiemDanh).isThoat = false;
+            (sender as frm_GV_DiemDanh).Close();
+            this.Show();
+
+        }
+    
+
     }
 }
