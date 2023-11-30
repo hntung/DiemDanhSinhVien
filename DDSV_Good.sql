@@ -81,7 +81,7 @@ CREATE TABLE LichHoc(
 
 INSERT INTO GiangVien (MaGiangVien, HoTenGiangVien, TrinhDo, ChuyenMon) 
 VALUES
-('GV001', 'Tran Van Tuan', 'Tien si', 'Cong nghe thong tin'),
+('GV001', N'Lâm Thị Họa Mi', 'Tien si', 'Cong nghe thong tin'),
 ('GV002', 'Nguyen Thi Thu', 'Thac si', 'Ke toan'),
 ('GV003', 'Le Van Nghia', 'Tien si', 'Kinh te'),
 ('GV004', 'Pham Van Hung', 'Thac si', 'Ngoai ngu'),
@@ -89,8 +89,8 @@ VALUES
 
 INSERT INTO SinhVien (MaSinhVien, HoTenSinhVien, NgaySinh, GioiTinh, LopNienChe) 
 VALUES
-('SV001', 'Tran Van An', '2000-01-15', 'Nam', 'K18DH1'),
-('SV002', 'Nguyen Thi Binh', '2000-05-20', 'Nu', 'K18DH2'),
+('SV001', N'Bồ Quang Diệu', '2000-01-15', 'Nam', 'K18DH1'),
+('SV002', N'Hồ Ngọc Tùng', '2000-05-20', 'Nu', 'K18DH2'),
 ('SV003', 'Le Van Cuong', '1999-12-10', 'Nam', 'K18CN1'),
 ('SV004', 'Pham Thi Dung', '2000-03-25', 'Nu', 'K18CN2'),
 ('SV005', 'Hoang Van Hieu', '1999-08-05', 'Nam', 'K18QT1'),
@@ -224,7 +224,8 @@ alter table SinhVien
 alter table GiangVien
 	ALTER COLUMN HoTenGiangVien NVARCHAR(50)
 
-
+update SinhVien
+set Image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGlQ7nJKIi_Uakf7nFaDtVj_QniD6qvoZUg&usqp=CAU'
 -- ví dụ
 select *from DiemDanh where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-15'
 
