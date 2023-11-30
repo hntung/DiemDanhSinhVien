@@ -1,4 +1,4 @@
-use master
+﻿use master
 create database DDSV_Last
 
 use DDSV_Last
@@ -213,6 +213,19 @@ UNION ALL
 SELECT MaSinhVien, MaLopMonHoc, '2023-03-10', NULL FROM SV_LopMonHoc WHERE MaLopMonHoc = 'LMH008';
 
 
+ALTER TABLE SinhVien
+  ADD Image varchar(1000)
+update DiemDanh 
+set TrangThai = N'Có mặt'
+
+alter table SinhVien
+	ALTER COLUMN HoTenSinhVien NVARCHAR(50)
+
+alter table GiangVien
+	ALTER COLUMN HoTenGiangVien NVARCHAR(50)
+
+
+-- ví dụ
 select *from DiemDanh where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-15'
 
 select distinct NgayHoc from DiemDanh where MaLopMonHoc = 'LMH001'
@@ -221,5 +234,6 @@ select distinct NgayHoc from DiemDanh where MaLopMonHoc = 'LMH001'
 
 select DiemDanh.MaSinhVien,HoTenSinhVien,NgayHoc from DiemDanh inner join SinhVien on DiemDanh.MaSinhVien = SinhVien.MaSinhVien where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-10'
 
-update DiemDanh 
-set TrangThai = 'Yes'
+
+
+select DiemDanh.masinhvien, hotensinhvien, MaLopMonHoc, ngayhoc, trangthai from DiemDanh inner join sinhvien on diemdanh.masinhvien = sinhvien.masinhvien where DiemDanh.MaSinhVien = 'SV001' 

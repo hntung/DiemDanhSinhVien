@@ -102,5 +102,7 @@ namespace DoAn
             //if (r == DialogResult.Cancel)
             //    e.Cancel = true;
         }
+
+
     }
 }

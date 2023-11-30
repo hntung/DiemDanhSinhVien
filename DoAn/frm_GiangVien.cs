@@ -98,7 +98,10 @@ namespace DoAn
             this.Show();
 
         }
-    
 
+        private void InfoMenuStrip_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

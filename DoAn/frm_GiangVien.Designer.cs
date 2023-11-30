@@ -167,6 +167,7 @@
             this.InfoMenuStrip.Name = "InfoMenuStrip";
             this.InfoMenuStrip.Size = new System.Drawing.Size(234, 28);
             this.InfoMenuStrip.Text = "Thông tin cá nhân";
+            this.InfoMenuStrip.Click += new System.EventHandler(this.InfoMenuStrip_Click);
             // 
             // ChangePasswordMenuStrip
             // 

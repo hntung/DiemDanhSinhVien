@@ -51,7 +51,7 @@ namespace DoAn
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(298, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(357, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(381, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -118,8 +118,8 @@ namespace DoAn
             this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.HeaderText = "TrangThai";
             this.TrangThai.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
+            "Có mặt",
+            "Vắng"});
             this.TrangThai.MinimumWidth = 6;
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -177,7 +177,7 @@ namespace DoAn
             // 
             this.dangxuatMenuStrip.Name = "dangxuatMenuStrip";
             this.dangxuatMenuStrip.Size = new System.Drawing.Size(224, 26);
-            this.dangxuatMenuStrip.Text = "Đăng xuất";
+            this.dangxuatMenuStrip.Text = "Thoát";
             this.dangxuatMenuStrip.Click += new System.EventHandler(this.dangxuatMenuStrip_Click);
             // 
             // frm_GV_DiemDanh
@@ -192,7 +192,6 @@ namespace DoAn
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
-            this.Name = "frm_GV_DiemDanh";
             this.Text = "frm_GV_DiemDanh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_GV_DiemDanh_FormClosing);
             this.Load += new System.EventHandler(this.frm_GV_DiemDanh_Load);
@@ -212,13 +211,13 @@ namespace DoAn
         private System.Windows.Forms.DataGridView grd_DiemDanh;
         private System.Windows.Forms.Button btn_ChonNgay;
         private System.Windows.Forms.Button btn_Luu;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem Name;
+        private System.Windows.Forms.ToolStripMenuItem ketquadiemdanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewComboBoxColumn TrangThai;
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem Name;
-        private System.Windows.Forms.ToolStripMenuItem ketquadiemdanh;
         private System.Windows.Forms.ToolStripMenuItem dangxuatMenuStrip;
     }
 }
