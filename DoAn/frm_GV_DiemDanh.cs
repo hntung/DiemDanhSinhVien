@@ -29,7 +29,7 @@ namespace DoAn
 
         public void getNgayHoc(string ngayhoc)
         {
-            Ngayhoc = ngayhoc;
+            Ngayhoc = DateTime.Parse(ngayhoc).ToString("MM-dd-yyyy");
 
         }
 

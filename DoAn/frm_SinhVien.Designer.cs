@@ -44,6 +44,7 @@
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếtQuảĐiểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.info = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grd_DiemDanhLopMH)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -148,6 +149,7 @@
             this.TenSinhVien.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đổiMậtKhẩuToolStripMenuItem,
             this.kếtQuảĐiểmDanhToolStripMenuItem,
+            this.info,
             this.logout});
             this.TenSinhVien.Name = "TenSinhVien";
             this.TenSinhVien.Size = new System.Drawing.Size(63, 24);
@@ -171,6 +173,12 @@
             this.logout.Size = new System.Drawing.Size(230, 26);
             this.logout.Text = "Đăng xuất";
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // info
+            // 
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(230, 26);
+            this.info.Text = "Thông tin cá nhân";
             // 
             // frm_SinhVien
             // 
@@ -213,5 +221,6 @@
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kếtQuảĐiểmDanhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logout;
+        private System.Windows.Forms.ToolStripMenuItem info;
     }
 }
