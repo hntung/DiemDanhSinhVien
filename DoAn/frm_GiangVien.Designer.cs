@@ -143,7 +143,7 @@
             this.NameMenuStrip});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(228, 31);
+            this.menuStrip.Size = new System.Drawing.Size(78, 31);
             this.menuStrip.TabIndex = 8;
             this.menuStrip.Text = "menuStrip";
             // 

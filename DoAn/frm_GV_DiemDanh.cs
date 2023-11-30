@@ -17,15 +17,22 @@ namespace DoAn
         DataTable dt_diemdanh = new DataTable();
         public bool isThoat = true;
         string id;
-        public string Id { get => id; set => id = value; }
 
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public void getID(string malop)
         {
             Id = malop;
         }
         string ngayhoc;
-        public string Ngayhoc { get => ngayhoc; set => ngayhoc = value; }
-       
+        public string Ngayhoc
+        {
+            get { return ngayhoc; }
+            set { ngayhoc = value; }
+        }
 
         public void getNgayHoc(string ngayhoc)
         {
@@ -34,7 +41,11 @@ namespace DoAn
         }
 
         string magv;
-        public string Magv { get => magv; set => magv = value; }
+        public string Magv
+        {
+            get { return magv; }
+            set { magv = value; }
+        }
         public void getMaGV(string ma)
         {
             Magv = ma;

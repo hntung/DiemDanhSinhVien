@@ -18,9 +18,10 @@ namespace DoAn
 
         SqlConnection connect;
 
-        public SqlConnection Connect 
-        { 
-            get => connect; set => connect = value; 
+        public SqlConnection Connect
+        {
+            get { return connect; }
+            set { connect = value; }
         }
         public DBConnect()
         {

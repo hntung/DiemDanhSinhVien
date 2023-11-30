@@ -15,15 +15,22 @@ namespace DoAn
         DBConnect db = new DBConnect();
         public bool isThoat = true;
         string malop;
-        public string Malop { get => malop; set => malop = value; }
-
+        public string Malop
+        {
+            get { return malop; }
+            set { malop = value; }
+        }
         void getMaLop()
         {
             Malop = cbo_Lop.SelectedValue.ToString();
         }
         string id;
 
-        public string Id { get => id; set => id = value; }
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         public void getID(string username)
         {

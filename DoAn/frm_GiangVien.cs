@@ -17,8 +17,14 @@ namespace DoAn
         public bool isThoat = true;
         DataSet ds_LopGiangDay = new DataSet();
         string id;
-       
-        public string Id { get => id; set => id = value; }
+
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+
         public void getID(string username)
         {
             Id = username;
