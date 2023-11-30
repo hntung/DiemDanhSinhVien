@@ -76,8 +76,7 @@ namespace DoAn
 
         private void frm_GV_DiemDanh_Load(object sender, EventArgs e)
         {
-            string sql = "select HoTenGiangvien from Giangvien where MaGiangVien = '" + magv + "'";
-            menuStrip.Items["Name"].Text = db.getScalar(sql).ToString();
+
             loadCboNgayHoc();
             loadGRDDiemDanh();
 

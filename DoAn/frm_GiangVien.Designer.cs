@@ -143,7 +143,7 @@
             this.NameMenuStrip});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(78, 31);
+            this.menuStrip.Size = new System.Drawing.Size(76, 31);
             this.menuStrip.TabIndex = 8;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -159,8 +159,8 @@
             this.NameMenuStrip.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.NameMenuStrip.ForeColor = System.Drawing.Color.Black;
             this.NameMenuStrip.Name = "NameMenuStrip";
-            this.NameMenuStrip.Size = new System.Drawing.Size(70, 27);
-            this.NameMenuStrip.Text = "Name";
+            this.NameMenuStrip.Size = new System.Drawing.Size(68, 27);
+            this.NameMenuStrip.Text = "Menu";
             // 
             // InfoMenuStrip
             // 

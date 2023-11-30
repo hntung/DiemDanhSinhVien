@@ -45,10 +45,10 @@ namespace DoAn
 
         void loadCboLop()
         {
-            string sql = "select distinct MaLopMonHoc from DiemDanh where MaSinhVien = '" + id+"'";
+            string sql = "select distinct d.MaLopMonHoc,TenMonHoc from DiemDanh d,LopMonHoc l,MonHoc m where MaSinhVien = '"+id+"' and l.MaMonHoc = m.MaMonHoc and l.MaLopMonHoc = d.MaLopMonHoc ";
             DataTable dt = db.getDataTable(sql);
             cbo_Lop.DataSource = dt;
-            cbo_Lop.DisplayMember = "MaLopMonHoc";
+            cbo_Lop.DisplayMember = "TenMonHoc";
             cbo_Lop.ValueMember = "MaLopMonHoc";
             getMaLop();
         }
@@ -58,7 +58,6 @@ namespace DoAn
             string sql = "select MaLopMonHoc, ngayhoc, trangthai from DiemDanh inner join sinhvien on diemdanh.masinhvien = sinhvien.masinhvien where DiemDanh.MaSinhVien = '"+id+"' and MaLopMonHoc = '"+malop+"' ";
             DataTable dt = db.getDataTable(sql);
             grd_DiemDanhLopMH.DataSource = dt;
-
         }
 
         private void frm_SinhVien_Load(object sender, EventArgs e)
@@ -89,6 +88,23 @@ namespace DoAn
         private void logout_Click(object sender, EventArgs e)
         {
             DangXuat(this, new EventArgs());
+        }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+            ThongTinSinhVien f = new ThongTinSinhVien();
+            f.getID(id);
+            f.Show();
+            this.Hide();
+            f.DangXuat += f_DangXuat;
+        }
+
+        void f_DangXuat(object sender, EventArgs e)
+        {
+            (sender as ThongTinSinhVien).isThoat = false;
+            (sender as ThongTinSinhVien).Close();
+            this.Show();
+
         }
     }
 }

@@ -43,8 +43,8 @@
             this.TenSinhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếtQuảĐiểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logout = new System.Windows.Forms.ToolStripMenuItem();
             this.info = new System.Windows.Forms.ToolStripMenuItem();
+            this.logout = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grd_DiemDanhLopMH)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -53,7 +53,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(279, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(341, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(368, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(285, 118);
+            this.label1.Location = new System.Drawing.Point(359, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(331, 32);
             this.label1.TabIndex = 5;
@@ -81,7 +81,7 @@
             this.grd_DiemDanhLopMH.Name = "grd_DiemDanhLopMH";
             this.grd_DiemDanhLopMH.RowHeadersWidth = 51;
             this.grd_DiemDanhLopMH.RowTemplate.Height = 24;
-            this.grd_DiemDanhLopMH.Size = new System.Drawing.Size(1002, 193);
+            this.grd_DiemDanhLopMH.Size = new System.Drawing.Size(1002, 285);
             this.grd_DiemDanhLopMH.TabIndex = 6;
             // 
             // Column3
@@ -113,7 +113,7 @@
             this.cbo_Lop.FormattingEnabled = true;
             this.cbo_Lop.Location = new System.Drawing.Point(267, 190);
             this.cbo_Lop.Name = "cbo_Lop";
-            this.cbo_Lop.Size = new System.Drawing.Size(132, 24);
+            this.cbo_Lop.Size = new System.Drawing.Size(167, 24);
             this.cbo_Lop.TabIndex = 13;
             this.cbo_Lop.SelectedIndexChanged += new System.EventHandler(this.cbo_Lop_SelectedIndexChanged);
             // 
@@ -147,9 +147,9 @@
             // TenSinhVien
             // 
             this.TenSinhVien.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.kếtQuảĐiểmDanhToolStripMenuItem,
             this.info,
+            this.kếtQuảĐiểmDanhToolStripMenuItem,
+            this.đổiMậtKhẩuToolStripMenuItem,
             this.logout});
             this.TenSinhVien.Name = "TenSinhVien";
             this.TenSinhVien.Size = new System.Drawing.Size(63, 24);
@@ -167,6 +167,13 @@
             this.kếtQuảĐiểmDanhToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
             this.kếtQuảĐiểmDanhToolStripMenuItem.Text = "Thông tin điểm danh";
             // 
+            // info
+            // 
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(230, 26);
+            this.info.Text = "Thông tin cá nhân";
+            this.info.Click += new System.EventHandler(this.info_Click);
+            // 
             // logout
             // 
             this.logout.Name = "logout";
@@ -174,17 +181,11 @@
             this.logout.Text = "Đăng xuất";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
-            // info
-            // 
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(230, 26);
-            this.info.Text = "Thông tin cá nhân";
-            // 
             // frm_SinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 509);
+            this.ClientSize = new System.Drawing.Size(1079, 557);
             this.Controls.Add(this.lbl_taikhoan);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.cbo_Lop);

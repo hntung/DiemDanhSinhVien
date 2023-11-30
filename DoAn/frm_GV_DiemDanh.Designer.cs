@@ -154,7 +154,7 @@ namespace DoAn
             this.Name});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1073, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1073, 30);
             this.menuStrip.TabIndex = 10;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -164,8 +164,8 @@ namespace DoAn
             this.ketquadiemdanh,
             this.dangxuatMenuStrip});
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(63, 24);
-            this.Name.Text = "Name";
+            this.Name.Size = new System.Drawing.Size(60, 26);
+            this.Name.Text = "Menu";
             // 
             // ketquadiemdanh
             // 

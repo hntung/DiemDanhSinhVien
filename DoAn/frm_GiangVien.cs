@@ -37,8 +37,8 @@ namespace DoAn
 
         private void frm_GiangVien_Load(object sender, EventArgs e)
         {
-            string sql = "select HoTenGiangvien from Giangvien where MaGiangVien = '"+Id+"'";
-            menuStrip.Items["NameMenuStrip"].Text = db.getScalar(sql).ToString();
+            //string sql = "select HoTenGiangvien from Giangvien where MaGiangVien = '"+Id+"'";
+            //menuStrip.Items["NameMenuStrip"].Text = db.getScalar(sql).ToString();
             load_gridview();
             load_CboLop();
             DataBingding(ds_LopGiangDay.Tables["LopGiangDay"]);
@@ -107,8 +107,19 @@ namespace DoAn
 
         private void InfoMenuStrip_Click(object sender, EventArgs e)
         {
-
+            ThongTinGiangVien f = new ThongTinGiangVien();
+            f.getID(id);
+            f.Show();
+            this.Hide();
+            f.DangXuat += f_DangXuatTTGV;
         }
 
+        void f_DangXuatTTGV(object sender, EventArgs e)
+        {
+            (sender as ThongTinGiangVien).isThoat = false;
+            (sender as ThongTinGiangVien).Close();
+            this.Show();
+
+        }
     }
 }

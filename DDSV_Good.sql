@@ -229,8 +229,14 @@ set Password = '1'
 update GiangVien
 set Password = '1'
 
+
+
 update SinhVien
-set Image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGlQ7nJKIi_Uakf7nFaDtVj_QniD6qvoZUg&usqp=CAU'
+set Image = 'https://i.imgur.com/SOxle80m.jpg' where MaSinhVien = 'SV001'
+
+update SinhVien
+set Image = 'https://i.imgur.com/dLE1ERom.jpg' where MaSinhVien = 'SV002'
+
 -- ví dụ
 select *from DiemDanh where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-15'
 
@@ -243,3 +249,5 @@ select DiemDanh.MaSinhVien,HoTenSinhVien,NgayHoc from DiemDanh inner join SinhVi
 
 
 select DiemDanh.masinhvien, hotensinhvien, MaLopMonHoc, ngayhoc, trangthai from DiemDanh inner join sinhvien on diemdanh.masinhvien = sinhvien.masinhvien where DiemDanh.MaSinhVien = 'SV001' 
+
+select distinct d.MaLopMonHoc,TenMonHoc from DiemDanh d,LopMonHoc l,MonHoc m where MaSinhVien = 'SV001' and l.MaMonHoc = m.MaMonHoc and l.MaLopMonHoc = d.MaLopMonHoc 
