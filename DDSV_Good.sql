@@ -213,8 +213,13 @@ UNION ALL
 SELECT MaSinhVien, MaLopMonHoc, '2023-03-10', NULL FROM SV_LopMonHoc WHERE MaLopMonHoc = 'LMH008';
 
 
-select *from DiemDanh where MaLopMonHoc = 'LMH001'
+select *from DiemDanh where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-15'
 
 select distinct NgayHoc from DiemDanh where MaLopMonHoc = 'LMH001'
 
-select * from DiemDanh inner join SinhVien on DiemDanh.MaSinhVien = SinhVien.MaSinhVien where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-10'
+	
+
+select DiemDanh.MaSinhVien,HoTenSinhVien,NgayHoc from DiemDanh inner join SinhVien on DiemDanh.MaSinhVien = SinhVien.MaSinhVien where MaLopMonHoc = 'LMH001' and NgayHoc = '2023-01-10'
+
+update DiemDanh 
+set TrangThai = 'Yes'
