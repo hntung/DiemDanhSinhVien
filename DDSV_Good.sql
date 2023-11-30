@@ -78,6 +78,11 @@ CREATE TABLE LichHoc(
     FOREIGN KEY (MaCaHoc) REFERENCES CaHoc(MaCaHoc) 
 ); 
 
+alter table SinhVien
+	ALTER COLUMN HoTenSinhVien NVARCHAR(50)
+
+alter table GiangVien
+	ALTER COLUMN HoTenGiangVien NVARCHAR(50)
 
 INSERT INTO GiangVien (MaGiangVien, HoTenGiangVien, TrinhDo, ChuyenMon) 
 VALUES
@@ -218,11 +223,11 @@ ALTER TABLE SinhVien
 update DiemDanh 
 set TrangThai = N'Có mặt'
 
-alter table SinhVien
-	ALTER COLUMN HoTenSinhVien NVARCHAR(50)
+update SinhVien
+set Password = '1'
 
-alter table GiangVien
-	ALTER COLUMN HoTenGiangVien NVARCHAR(50)
+update GiangVien
+set Password = '1'
 
 update SinhVien
 set Image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGlQ7nJKIi_Uakf7nFaDtVj_QniD6qvoZUg&usqp=CAU'
