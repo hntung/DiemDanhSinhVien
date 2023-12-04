@@ -51,10 +51,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(319, 152);
+            this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(279, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 32);
+            this.label1.Size = new System.Drawing.Size(350, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách lớp giảng dạy";
             // 
@@ -68,13 +68,13 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.grd_LopGiangDay.Location = new System.Drawing.Point(42, 213);
+            this.grd_LopGiangDay.Location = new System.Drawing.Point(37, 226);
             this.grd_LopGiangDay.Name = "grd_LopGiangDay";
             this.grd_LopGiangDay.ReadOnly = true;
             this.grd_LopGiangDay.RowHeadersWidth = 51;
             this.grd_LopGiangDay.RowTemplate.Height = 24;
             this.grd_LopGiangDay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_LopGiangDay.Size = new System.Drawing.Size(987, 174);
+            this.grd_LopGiangDay.Size = new System.Drawing.Size(864, 185);
             this.grd_LopGiangDay.TabIndex = 2;
             // 
             // Column1
@@ -116,9 +116,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(310, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(271, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(322, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -126,9 +126,9 @@
             // btn_ChonLop
             // 
             this.btn_ChonLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_ChonLop.Location = new System.Drawing.Point(42, 409);
+            this.btn_ChonLop.Location = new System.Drawing.Point(37, 435);
             this.btn_ChonLop.Name = "btn_ChonLop";
-            this.btn_ChonLop.Size = new System.Drawing.Size(205, 49);
+            this.btn_ChonLop.Size = new System.Drawing.Size(179, 52);
             this.btn_ChonLop.TabIndex = 6;
             this.btn_ChonLop.Text = "Chọn lớp điểm danh";
             this.btn_ChonLop.UseVisualStyleBackColor = true;
@@ -143,7 +143,8 @@
             this.NameMenuStrip});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(76, 31);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(73, 31);
             this.menuStrip.TabIndex = 8;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -159,42 +160,43 @@
             this.NameMenuStrip.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.NameMenuStrip.ForeColor = System.Drawing.Color.Black;
             this.NameMenuStrip.Name = "NameMenuStrip";
-            this.NameMenuStrip.Size = new System.Drawing.Size(68, 27);
+            this.NameMenuStrip.Size = new System.Drawing.Size(66, 27);
             this.NameMenuStrip.Text = "Menu";
             // 
             // InfoMenuStrip
             // 
             this.InfoMenuStrip.Name = "InfoMenuStrip";
-            this.InfoMenuStrip.Size = new System.Drawing.Size(234, 28);
+            this.InfoMenuStrip.Size = new System.Drawing.Size(226, 28);
             this.InfoMenuStrip.Text = "Thông tin cá nhân";
             this.InfoMenuStrip.Click += new System.EventHandler(this.InfoMenuStrip_Click);
             // 
             // ChangePasswordMenuStrip
             // 
             this.ChangePasswordMenuStrip.Name = "ChangePasswordMenuStrip";
-            this.ChangePasswordMenuStrip.Size = new System.Drawing.Size(234, 28);
+            this.ChangePasswordMenuStrip.Size = new System.Drawing.Size(226, 28);
             this.ChangePasswordMenuStrip.Text = "Đổi mật khẩu";
+            this.ChangePasswordMenuStrip.Click += new System.EventHandler(this.ChangePasswordMenuStrip_Click);
             // 
             // LogoutMenuStrip
             // 
             this.LogoutMenuStrip.Name = "LogoutMenuStrip";
-            this.LogoutMenuStrip.Size = new System.Drawing.Size(234, 28);
+            this.LogoutMenuStrip.Size = new System.Drawing.Size(226, 28);
             this.LogoutMenuStrip.Text = "Đăng xuất";
             this.LogoutMenuStrip.Click += new System.EventHandler(this.LogoutMenuStrip_Click);
             // 
             // cbo_Lop
             // 
             this.cbo_Lop.FormattingEnabled = true;
-            this.cbo_Lop.Location = new System.Drawing.Point(281, 423);
+            this.cbo_Lop.Location = new System.Drawing.Point(246, 449);
             this.cbo_Lop.Name = "cbo_Lop";
-            this.cbo_Lop.Size = new System.Drawing.Size(132, 24);
+            this.cbo_Lop.Size = new System.Drawing.Size(116, 25);
             this.cbo_Lop.TabIndex = 11;
             // 
             // frm_GiangVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 486);
+            this.ClientSize = new System.Drawing.Size(911, 516);
             this.Controls.Add(this.cbo_Lop);
             this.Controls.Add(this.btn_ChonLop);
             this.Controls.Add(this.pictureBox1);

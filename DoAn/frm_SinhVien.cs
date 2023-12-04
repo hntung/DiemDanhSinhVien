@@ -106,5 +106,20 @@ namespace DoAn
             this.Show();
 
         }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoiMatKhauSinhVien f = new DoiMatKhauSinhVien();
+            f.getID(id);
+            f.Show();
+            this.Hide();
+            f.DangXuat += f_DangXuatDMK;
+        }
+        void f_DangXuatDMK(object sender, EventArgs e)
+        {
+            (sender as DoiMatKhauSinhVien).isThoat = false;
+            (sender as DoiMatKhauSinhVien).Close();
+            this.Show();
+        }
     }
 }

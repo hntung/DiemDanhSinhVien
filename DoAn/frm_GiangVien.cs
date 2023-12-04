@@ -113,13 +113,28 @@ namespace DoAn
             this.Hide();
             f.DangXuat += f_DangXuatTTGV;
         }
-
+        
         void f_DangXuatTTGV(object sender, EventArgs e)
         {
             (sender as ThongTinGiangVien).isThoat = false;
             (sender as ThongTinGiangVien).Close();
             this.Show();
 
+        }
+
+        private void ChangePasswordMenuStrip_Click(object sender, EventArgs e)
+        {
+            DoiMatKhauGiangVien f = new DoiMatKhauGiangVien();
+            f.getID(id);
+            f.Show();
+            this.Hide();
+            f.DangXuat += f_DangXuatDMK;
+        }
+        void f_DangXuatDMK(object sender, EventArgs e)
+        {
+            (sender as DoiMatKhauGiangVien).isThoat = false;
+            (sender as DoiMatKhauGiangVien).Close();
+            this.Show();
         }
     }
 }

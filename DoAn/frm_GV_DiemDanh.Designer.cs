@@ -30,7 +30,6 @@ namespace DoAn
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GV_DiemDanh));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbo_NgayHoc = new System.Windows.Forms.ComboBox();
             this.grd_DiemDanh = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,28 +42,19 @@ namespace DoAn
             this.Name = new System.Windows.Forms.ToolStripMenuItem();
             this.ketquadiemdanh = new System.Windows.Forms.ToolStripMenuItem();
             this.dangxuatMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grd_DiemDanh)).BeginInit();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(357, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(381, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // cbo_NgayHoc
             // 
             this.cbo_NgayHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbo_NgayHoc.FormattingEnabled = true;
-            this.cbo_NgayHoc.Location = new System.Drawing.Point(12, 194);
+            this.cbo_NgayHoc.Location = new System.Drawing.Point(9, 158);
             this.cbo_NgayHoc.Name = "cbo_NgayHoc";
-            this.cbo_NgayHoc.Size = new System.Drawing.Size(177, 28);
+            this.cbo_NgayHoc.Size = new System.Drawing.Size(155, 28);
             this.cbo_NgayHoc.TabIndex = 5;
             // 
             // grd_DiemDanh
@@ -77,12 +67,12 @@ namespace DoAn
             this.Column2,
             this.Column5,
             this.TrangThai});
-            this.grd_DiemDanh.Location = new System.Drawing.Point(12, 249);
+            this.grd_DiemDanh.Location = new System.Drawing.Point(9, 217);
             this.grd_DiemDanh.Name = "grd_DiemDanh";
             this.grd_DiemDanh.RowHeadersWidth = 51;
             this.grd_DiemDanh.RowTemplate.Height = 24;
             this.grd_DiemDanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_DiemDanh.Size = new System.Drawing.Size(1049, 225);
+            this.grd_DiemDanh.Size = new System.Drawing.Size(918, 239);
             this.grd_DiemDanh.TabIndex = 6;
             // 
             // Column1
@@ -127,24 +117,29 @@ namespace DoAn
             // 
             // btn_ChonNgay
             // 
-            this.btn_ChonNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_ChonNgay.Location = new System.Drawing.Point(210, 194);
+            this.btn_ChonNgay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btn_ChonNgay.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_ChonNgay.Location = new System.Drawing.Point(184, 158);
             this.btn_ChonNgay.Name = "btn_ChonNgay";
-            this.btn_ChonNgay.Size = new System.Drawing.Size(144, 37);
+            this.btn_ChonNgay.Size = new System.Drawing.Size(126, 37);
             this.btn_ChonNgay.TabIndex = 8;
             this.btn_ChonNgay.Text = "Chọn ngày buổi học";
-            this.btn_ChonNgay.UseVisualStyleBackColor = true;
+            this.btn_ChonNgay.UseVisualStyleBackColor = false;
             this.btn_ChonNgay.Click += new System.EventHandler(this.btn_ChonNgay_Click);
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Luu.Location = new System.Drawing.Point(40, 491);
+            this.btn_Luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btn_Luu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_Luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Luu.Image")));
+            this.btn_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Luu.Location = new System.Drawing.Point(24, 475);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(126, 63);
+            this.btn_Luu.Size = new System.Drawing.Size(93, 67);
             this.btn_Luu.TabIndex = 9;
             this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Luu.UseVisualStyleBackColor = false;
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // menuStrip
@@ -154,7 +149,8 @@ namespace DoAn
             this.Name});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1073, 30);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(939, 28);
             this.menuStrip.TabIndex = 10;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -164,27 +160,38 @@ namespace DoAn
             this.ketquadiemdanh,
             this.dangxuatMenuStrip});
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(60, 26);
+            this.Name.Size = new System.Drawing.Size(58, 24);
             this.Name.Text = "Menu";
             // 
             // ketquadiemdanh
             // 
             this.ketquadiemdanh.Name = "ketquadiemdanh";
-            this.ketquadiemdanh.Size = new System.Drawing.Size(224, 26);
+            this.ketquadiemdanh.Size = new System.Drawing.Size(210, 26);
             this.ketquadiemdanh.Text = "Kết quả điểm danh";
+            this.ketquadiemdanh.Click += new System.EventHandler(this.ketquadiemdanh_Click);
             // 
             // dangxuatMenuStrip
             // 
             this.dangxuatMenuStrip.Name = "dangxuatMenuStrip";
-            this.dangxuatMenuStrip.Size = new System.Drawing.Size(224, 26);
+            this.dangxuatMenuStrip.Size = new System.Drawing.Size(210, 26);
             this.dangxuatMenuStrip.Text = "Thoát";
             this.dangxuatMenuStrip.Click += new System.EventHandler(this.dangxuatMenuStrip_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(312, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(333, 102);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_GV_DiemDanh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 566);
+            this.ClientSize = new System.Drawing.Size(939, 601);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.btn_ChonNgay);
             this.Controls.Add(this.grd_DiemDanh);
@@ -195,10 +202,10 @@ namespace DoAn
             this.Text = "frm_GV_DiemDanh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_GV_DiemDanh_FormClosing);
             this.Load += new System.EventHandler(this.frm_GV_DiemDanh_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grd_DiemDanh)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

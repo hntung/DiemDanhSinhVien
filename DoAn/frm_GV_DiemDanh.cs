@@ -113,6 +113,14 @@ namespace DoAn
             //    e.Cancel = true;
         }
 
+        private void ketquadiemdanh_Click(object sender, EventArgs e)
+        {
+            frm_RpGiangVien f = new frm_RpGiangVien();
+            f.getMa(Id);
+            f.getMaGV(Magv);
+            f.Show();
+        }
+
 
     }
 }

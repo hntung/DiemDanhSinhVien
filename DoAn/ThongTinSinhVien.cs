@@ -58,7 +58,7 @@ namespace DoAn
             catch (Exception ex)
             {
                 // Xử lý lỗi nếu có
-                MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

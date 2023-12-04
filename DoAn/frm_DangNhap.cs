@@ -108,7 +108,6 @@ namespace DoAn
                 reset();
             }
         }
-
         private void frm_DangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r;
